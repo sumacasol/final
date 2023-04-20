@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+background-color: lightgoldenrodyellow;
+transition: background .5s;
+}
+
+body.dark {
+    background:palevioletred;
+}
+.flex {
+    display:flex;
+    margin-top:100px;
+    justify-content:space-evenly;
+}
+
+.box {
+    width:200px;
+    height:200px;
+    background:khaki;
+    border: 1px solid;
+    transition: background .5s;
+    animation:spin 5s infinite linear;
+    animation-play-state:paused;
+}
+
+.box.dark {
+    background:rosybrown;
+}
+.box.glow {
+    background-color:lightsteelblue;
+    box-shadow: 0 0 10px 5px lightsteelblue;
+}
+
+.box.spin {
+    animation-play-state: running;
+}
+
+.chair {
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:200px;
+    opacity:0;
+    transition: opacity .5s;
+}
+
+.show {
+    opacity:1;
+}
+
+.draggable {
+    cursor:grab;
+}
+@keyframes spin {
+    0% {
+        transform:rotate(0);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
